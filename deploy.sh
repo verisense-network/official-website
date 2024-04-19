@@ -7,4 +7,4 @@ rm -r dist
 yarn build
 rm -f firebase.json
 ln -s firebase.prd.json firebase.json
-firebase deploy --only hosting:sophon-web-prd
+firebase deploy --only hosting:sophon-web
