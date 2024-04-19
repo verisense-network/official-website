@@ -1,7 +1,7 @@
 {
   "hosting": {
     "public": "dist",
-    "site": "sophon-web-prd",
+    "site": "sophon-web",
     "ignore": [
       "firebase.json",
       "**/.*",
