@@ -1,10 +1,11 @@
 {
-  "name": "reda-landing",
+  "name": "ebunker-sophon",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:test": "NODE_ENV=test next build",
     "start": "next start",
     "lint": "next lint"
   },
