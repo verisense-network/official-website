@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "@chakra-ui/react";
+import { Image,Link } from "@chakra-ui/react"; 
 
 const Footer = () => {
   return (
@@ -14,10 +14,30 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2">
-          <Image boxSize={8} src="/icon-x.svg" alt="X" />
-          <Image boxSize={8} src="/icon-t.svg" alt="T" />
-          <Image boxSize={8} src="/icon-f.svg" alt="F" />
-          <Image boxSize={8} src="/icon-e.svg" alt="E" />
+          <Link
+            href="https://twitter.com/ebunker_eth"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image boxSize={8} src="/icon-x.svg" alt="X" />
+          </Link>
+          <Link
+            href="https://discord.gg/nuvw6hmvnK"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image boxSize={8} src="/icon-t.svg" alt="T" />
+          </Link>
+          <Link href="https://t.me/ebunkerio" target="_blank" rel="noreferrer">
+            <Image boxSize={8} src="/icon-f.svg" alt="F" />
+          </Link>
+          <Link
+            href="mailto:support@ebunker.io"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image boxSize={8} src="/icon-e.svg" alt="E" />
+          </Link>
         </div>
       </div>
     </div>
