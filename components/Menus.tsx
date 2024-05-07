@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React,{useCallback} from "react";
 import { Link } from "@chakra-ui/next-js";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
@@ -12,6 +12,7 @@ import {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
+  useToast
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/navigation";
@@ -32,6 +33,10 @@ const HeaderMenus = () => {
   const pathname = usePathname();
   const router = useRouter();
   const links = process.env.NODE_ENV != "production" ? linksToTest : linksToProduction;
+  const toast = useToast() 
+  const addToast = useCallback(() => { 
+    toast({ title: 'Coming Soon',position: 'top',isClosable: true,duration: 3000,status:'success' })
+  },[toast])
   return (
     <>
       <div className="flex md:hidden items-center justify-center min-w-20">
@@ -47,7 +52,7 @@ const HeaderMenus = () => {
               <MenuItem
                 className={clsx({"text-theme-color":link.href === pathname})}
                 key={link.href} 
-                onClick={()=>router.push(link.href)}
+                onClick={link.href === "/" ? undefined :addToast}
               >
                 {link.title}
               </MenuItem>
@@ -60,17 +65,17 @@ const HeaderMenus = () => {
           const isCurrentRoute = link.href === pathname;
 
           return (
-            <Link
+            <div
               className={clsx(
-                "text-lg relative",
+                "text-lg relative cursor-pointer",
                 isCurrentRoute ? "text-theme-color" : "!text-white/70"
               )}
-              key={link.title}
-              href={link.href}
+              key={link.title} 
               rel="noreferrer"
+              onClick={link.href === "/" ? undefined :addToast}
             >
               <span>{link.title}</span>
-            </Link>
+            </div>
           );
         })}
       </div>
