@@ -39,7 +39,7 @@ const HeaderMenus = () => {
   },[toast])
   return (
     <>
-      <div className="flex md:hidden items-center justify-center min-w-20">
+      <div className="flex items-center justify-center md:hidden min-w-20">
         <Menu>
           <MenuButton className="text-theme-color text-[14px] md:text-[20px]">
             {pathname === "/"
@@ -60,7 +60,7 @@ const HeaderMenus = () => {
           </MenuList>
         </Menu>
       </div>
-      <div className="hidden md:flex items-center justify-center gap-6 md:gap-12  min-w-20">
+      <div className="items-center justify-center hidden gap-6 md:flex md:gap-12 min-w-20">
         {links.map((link) => {
           const isCurrentRoute = link.href === pathname;
 

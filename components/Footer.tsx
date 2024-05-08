@@ -13,7 +13,7 @@ const Footer = () => {
           <div>powered by the interoperability and FHE technologies.</div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2">
+        <div className="flex flex-col items-center gap-1 md:flex-row md:gap-2">
           <Link
             href="https://twitter.com/ebunker_eth"
             target="_blank"

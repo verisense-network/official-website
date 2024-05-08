@@ -13,7 +13,7 @@ const StepRestaking = () => {
       </div>
       <div className="flex text-white/70 text-[12px] md:text-[16px] font-medium w-full items-center mt-1">
         <span className="inline-block ">Restaking</span>
-        <div className="flex-grow flex flex-col justify-center items-center ">
+        <div className="flex flex-col items-center justify-center flex-grow ">
           <span className="inline-block">Validator</span>
           <span className="inline-block">Marketplace</span>
         </div>
@@ -30,7 +30,7 @@ const StepRestaking = () => {
       </div>
       <div className="flex flex-col h-full text-white/70 text-[16px] font-medium ml-[30px]">
         <span className="inline-block ">Restaking</span>
-        <div className="flex-grow flex flex-col justify-center text-white">
+        <div className="flex flex-col justify-center flex-grow text-white">
           <span className="inline-block">Validator</span>
           <span className="inline-block">Marketplace</span>
         </div>

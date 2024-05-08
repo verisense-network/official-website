@@ -8,7 +8,7 @@ import Validator from "@/components/about/Validator";
  
 export default function Home() {
   return (
-    <div className="flex w-screen min-h-screen flex-col">
+    <div className="flex flex-col w-screen min-h-screen">
       <Trust />
       <Elevating />
       <Restakers />
