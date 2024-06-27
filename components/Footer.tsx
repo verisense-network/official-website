@@ -1,5 +1,5 @@
 import React from "react";
-import { Image,Link } from "@chakra-ui/react"; 
+import { Image, Link } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className=" text-white/80 font-light text-[12px] md:text-[16px] leading-[18px] md:leading-[28px]">
           <Image src="/title.svg" className="w-[244px] h-[42px] mb-3" alt="" />
           <div>
-            VeriSense elevates the blockchain security economics to new heights,
+            VeriSense elevates the blockchain security economics to new heights,
           </div>
           <div>powered by the interoperability and FHE technologies.</div>
         </div>
@@ -21,11 +21,7 @@ const Footer = () => {
           >
             <Image boxSize={8} src="/icon-x.svg" alt="X" />
           </Link>
-          <Link
-            href=""
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href="" target="_blank" rel="noreferrer">
             <Image boxSize={8} src="/icon-t.svg" alt="T" />
           </Link>
           <Link href="" target="_blank" rel="noreferrer">
