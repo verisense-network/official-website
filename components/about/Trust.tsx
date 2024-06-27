@@ -11,7 +11,7 @@ const Trust = () => {
           Interoperability
         </div>
         <div className="leading-[20px] md:leading-[36px] font-light mt-[30px]">
-          Sophon is reinventing decentralized trust boost with an{" "}
+          VeriSense is reinventing decentralized trust boost with an{" "}
         </div>
         <div className="leading-[20px] md:leading-[36px] font-light">omnichain based restaking protocol</div>
       </div>

@@ -6,7 +6,7 @@ const Item = () => {
     <div className="text-white md:mt-[60px] pl-3 md:pl-0 ">
       <div className="text-[16px] text-[#00f2cd] font-medium">VALIDATORS</div>
       <div className=" clear-both mt-[30px] text-[26px] md:text-[48px] leading-[40px] md:leading-[64px]">
-        Join Sophon and become
+        Join VeriSense and become
       </div>
       <div className=" clear-both text-[26px] md:text-[48px] leading-[40px] md:leading-[64px]">
         <span>an in-network node.</span>

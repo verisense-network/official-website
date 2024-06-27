@@ -17,7 +17,7 @@ const Item = () => {
         />
       </div>
       <div className="text-[12px] md:text-[20px] font-light mt-[30px] leading-[38px]">
-        Join the Sophon Ecosystem. Every Contribution Matters.
+        Join the VeriSense Ecosystem. Every Contribution Matters.
       </div>
     </div>
   );
