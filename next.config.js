@@ -11,7 +11,8 @@ module.exports = (phase, { defaultConfig }) => {
 
   return {
     /* config options for all phases except development here */
-    distDir: "dist",
+    basePath: "/VeriSense-official-website",
+    distDir: "docs",
     output: "export",
     crossOrigin: "anonymous",
     // trailingSlash: true,
