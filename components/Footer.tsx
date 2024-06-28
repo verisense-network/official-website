@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="mt-[60px] md:mt-[160px] border-t border-[#272727] py-3 md:py-0">
       <div className="md:w-[60%] mx-auto md:h-[224px] flex justify-between items-center  p-3 md:p-0">
         <div className=" text-white/80 font-light text-[12px] md:text-[16px] leading-[18px] md:leading-[28px]">
-          <Image src="/title.svg" className="w-[244px] h-[42px] mb-3" alt="" />
+          <Image src="/verisense_logo.png" className="w-[240px] h-[80px] mb-3" alt="" />
           <div>
             VeriSense elevates the blockchain security economics to new heights,
           </div>
@@ -22,13 +22,13 @@ const Footer = () => {
             <Image boxSize={8} src="/icon-x.svg" alt="X" />
           </Link>
           <Link
-            href=""
+            href="https://discord.gg/cvQQe7ne"
             target="_blank"
             rel="noreferrer"
           >
             <Image boxSize={8} src="/icon-t.svg" alt="T" />
           </Link>
-          <Link href="" target="_blank" rel="noreferrer">
+          <Link href="https://t.me/verisense_official" target="_blank" rel="noreferrer">
             <Image boxSize={8} src="/icon-f.svg" alt="F" />
           </Link>
           <Link
