@@ -20,7 +20,7 @@ const Item = () => {
         Running your nodes and growing your business. Maximize
       </div>
       <div className="text-[12px] md:text-[20px] font-light leading-[28px] md:leading-[38px]">
-        Returns for your existing investments
+        Returns for your existing investments
       </div>
     </div>
   );
