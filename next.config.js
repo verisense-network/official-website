@@ -14,8 +14,8 @@ module.exports = (phase, { defaultConfig }) => {
     distDir: "docs",
     output: "export",
     crossOrigin: "anonymous",
-    basePath: '/vn-official-website',
-    assetPrefix: '/vn-official-website',
+    //basePath: '/vn-official-website',
+    //assetPrefix: '/vn-official-website',
     // trailingSlash: true,
     images: {
       unoptimized: true,
