@@ -1,5 +1,4 @@
 import React from "react";
-import { Image } from "@chakra-ui/react";
 
 const Item = () => {
   return (
@@ -9,7 +8,7 @@ const Item = () => {
         Find quality, variety,
       </div>
       <div className=" clear-both text-[26px] md:text-[48px] leading-[40px] md:leading-[64px]">
-        <span>and affordability. </span>
+        <span>and affordability.</span>
         {/* <Image
           className="inline-block w-[36px] h-[32px] ml-1 md:ml-2"
           src="/icon-validators.svg"

@@ -9,7 +9,7 @@ const Item = () => {
         Embrace
       </div>
       <div className=" clear-both text-[26px] md:text-[48px] leading-[40px] md:leading-[64px]">
-        <span>Significance. </span>
+        <span>Significance.</span>
         <Image
           className="inline-block w-[32px] h-[32px] ml-1 md:ml-2"
           src="/icon-ecosystem.svg"
