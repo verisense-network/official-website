@@ -12,16 +12,16 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const linksToProduction = [
-  { title: "About", href: "/" },
-  { title: "Restaking", href: "/restaking" },
-  { title: "Marketplace", href: "/marketplace" },
-  { title: "Ecosystem", href: "/ecosystem" },
+  { title: "AVS Client", href: "/" },
+  { title: "Validator", href: "/restaking" },
+  { title: "Ecosystem", href: "/marketplace" },
+  { title: "About", href: "/ecosystem" },
 ];
 const linksToTest = [
-  { title: "About", href: "/" },
-  { title: "Restaking", href: "/restaking/" },
-  { title: "Marketplace", href: "/marketplace/" },
-  { title: "Ecosystem", href: "/ecosystem/" },
+  { title: "AVS Client", href: "/" },
+  { title: "Validator", href: "/restaking" },
+  { title: "Ecosystem", href: "/marketplace" },
+  { title: "About", href: "/ecosystem" },
 ];
 
 const HeaderMenus = () => {

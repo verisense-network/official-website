@@ -7,7 +7,7 @@ const Header = () => {
     <div className="h-[78px] fixed left-0 right-0 z-50 text-xs flex items-center justify-between bg-[#000000]/20 backdrop-blur px-[10%] md:px-[20%] border-b border-[#00f2cd]/20">
       <Image
         src={"/verisense_logo.svg"}
-        className="w-[150px] h-[50px]"
+        className="w-[210px] h-[70px]"
         alt="Logo"
       />
       <Menus />
