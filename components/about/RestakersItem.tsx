@@ -4,7 +4,7 @@ import { Image } from "@chakra-ui/react";
 const Item = () => {
   return (
     <div className="text-white md:w-[570px] mt-[60px] pl-3 md:pl-0 md:mt-0">
-      <div className="text-[15px] md:text-[22px] text-[#ff847c] font-medium">
+      <div className="text-[22px] md:text-[22px] text-[#ff847c] font-medium">
         AVS Client
       </div>
       <div className=" clear-both mt-[30px] text-[26px] md:text-[48px] leading-[40px] md:leading-[64px]">

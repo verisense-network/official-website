@@ -3,8 +3,8 @@ import React from "react";
 
 const Trust = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center pt-[130px] pb-[30px] md:py-[160px] relative">
-      <div className="text-white text-[15px] md:text-[22px] font-medium">
+    <div className="flex flex-col md:flex-row items-center justify-center pt-[130px] pb-[30px] md:py-[160px] relative pl-3">
+      <div className="text-white text-[15px] md:text-[26px] font-medium">
         <div>VaaS: Validation-as-a-Service</div>
         <div className="text-[28px] md:text-[60px] leading-[40px] md:leading-[80px] font-black mt-[30px]">
           Trust boost with VaaS
@@ -23,7 +23,7 @@ const Trust = () => {
       <Image
         src="/image-trust.png"
         alt=""
-        className="w-[320px] h-[312px] md:w-[686px] md:h-[666px] block md:absolute md:left-[52%]"
+        className="md:w-[686px] md:h-[666px] block md:absolute md:left-[52%]"
       />
     </div>
   );
