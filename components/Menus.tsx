@@ -7,22 +7,16 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  useToast,
+  // useToast,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const linksToProduction = [
-  { title: "Whitepaper", href: "https://github.com/verisense-network/whitepaper" },
-  //{ title: "AVS Client", href: "/ecosystem" },
-  //{ title: "Validator", href: "/restaking" },
-  // { title: "Ecosystem", href: "/marketplace" },
+  { title: "Whitepaper", href: "#" },
   { title: "About", href: "/" },
 ];
 const linksToTest = [
-  { title: "Whitepaper", href: "https://github.com/verisense-network/whitepaper" },
-  //{ title: "AVS Client", href: "/ecosystem" },
-  //{ title: "Validator", href: "/restaking" },
-  // { title: "Ecosystem", href: "/marketplace" },
+  { title: "Whitepaper", href: "#" },
   { title: "About", href: "/" },
 ];
 
@@ -30,17 +24,16 @@ const HeaderMenus = () => {
   const pathname = usePathname();
   const links =
     process.env.NODE_ENV !== "production" ? linksToTest : linksToProduction;
-  const toast = useToast();
-  const addToast = useCallback(() => {
-    toast({
-      title: "Coming Soon",
-      position: "top",
-      isClosable: true,
-      duration: 3000,
-      status: "success",
-    });
-  }, [toast]);
-  
+  // const toast = useToast();
+  // const addToast = useCallback(() => {
+  //   toast({
+  //     title: "Coming Soon",
+  //     position: "top",
+  //     isClosable: true,
+  //     duration: 3000,
+  //     status: "success",
+  //   });
+  // }, [toast]);
   const router = useRouter();
   const handleClick = useCallback(() => {
     router.push("https://github.com/verisense-network/whitepaper");
@@ -82,7 +75,6 @@ const HeaderMenus = () => {
               )}
               key={link.title}
               rel="noreferrer"
-              href={link.href}
               // onClick={link.href === "/" ? undefined : addToast}
               onClick={link.href === "/" ? undefined : handleClick}
             >
