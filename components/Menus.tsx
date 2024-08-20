@@ -1,6 +1,6 @@
 "use client";
 import React, { useCallback } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import clsx from "clsx";
 import {
   Menu,
@@ -12,16 +12,18 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const linksToProduction = [
-  { title: "AVS Client", href: "/" },
-  { title: "Validator", href: "/restaking" },
-  { title: "Ecosystem", href: "/marketplace" },
-  { title: "About", href: "/ecosystem" },
+  { title: "Whitepaper", href: "https://github.com/verisense-network/whitepaper" },
+  //{ title: "AVS Client", href: "/ecosystem" },
+  //{ title: "Validator", href: "/restaking" },
+  // { title: "Ecosystem", href: "/marketplace" },
+  { title: "About", href: "/" },
 ];
 const linksToTest = [
-  { title: "AVS Client", href: "/" },
-  { title: "Validator", href: "/restaking" },
-  { title: "Ecosystem", href: "/marketplace" },
-  { title: "About", href: "/ecosystem" },
+  { title: "Whitepaper", href: "https://github.com/verisense-network/whitepaper" },
+  //{ title: "AVS Client", href: "/ecosystem" },
+  //{ title: "Validator", href: "/restaking" },
+  // { title: "Ecosystem", href: "/marketplace" },
+  { title: "About", href: "/" },
 ];
 
 const HeaderMenus = () => {
@@ -38,6 +40,12 @@ const HeaderMenus = () => {
       status: "success",
     });
   }, [toast]);
+  
+  const router = useRouter();
+  const handleClick = useCallback(() => {
+    router.push("https://github.com/verisense-network/whitepaper");
+  }, [router]);
+
   return (
     <>
       <div className="flex items-center justify-center md:hidden min-w-20">
@@ -53,7 +61,8 @@ const HeaderMenus = () => {
               <MenuItem
                 className={clsx({ "text-theme-color": link.href === pathname })}
                 key={link.href}
-                onClick={link.href === "/" ? undefined : addToast}
+                // onClick={link.href === "/" ? undefined : addToast}
+                onClick={link.href === "/" ? undefined : handleClick}
               >
                 {link.title}
               </MenuItem>
@@ -73,7 +82,9 @@ const HeaderMenus = () => {
               )}
               key={link.title}
               rel="noreferrer"
-              onClick={link.href === "/" ? undefined : addToast}
+              href={link.href}
+              // onClick={link.href === "/" ? undefined : addToast}
+              onClick={link.href === "/" ? undefined : handleClick}
             >
               <span>{link.title}</span>
             </div>
