@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 "use client";
 import React, { useCallback } from "react";
 import { usePathname, useRouter } from "next/navigation";
@@ -36,7 +37,7 @@ const HeaderMenus = () => {
   // }, [toast]);
   const router = useRouter();
   const handleClick = useCallback(() => {
-    router.push("https://github.com/verisense-network/whitepaper");
+    router.push("https://github.com/verisense-network/whitepaper/blob/main/verisense_whitepaper_20240818.pdf");
   }, [router]);
 
   return (
