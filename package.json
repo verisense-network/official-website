@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:github-pages": "next build && mv dist docs",
+    "build:github-pages": "next build && cp CNAME docs/ && touch docs/.nojekyll",
     "build:test": "NODE_ENV=test next build",
     "start": "next start",
     "lint": "next lint"
