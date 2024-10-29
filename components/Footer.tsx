@@ -4,8 +4,8 @@ import { Image, Link } from "@chakra-ui/react";
 const Footer = () => {
   return (
     <div className="mt-[60px] md:mt-[160px] border-t border-[#272727] py-3 md:py-0">
-      <div className="md:w-[60%] mx-auto md:h-[224px] flex justify-between items-center  p-3 md:p-0">
-        <div className=" text-white/80 font-light text-[12px] md:text-[16px] leading-[18px] md:leading-[28px]">
+      <div className="mx-auto md:h-[224px] flex justify-between items-center p-3 md:p-0 overflow-hidden">
+        <div className=" text-white/80 font-light text-[12px] lg:text-[16px] leading-[18px] md:leading-[28px]">
           <Image
             src="/verisense_logo.svg"
             className="w-[240px] h-[80px] mb-3"
@@ -17,7 +17,7 @@ const Footer = () => {
           <div>powered by the interoperability and FHE technologies.</div>
         </div>
 
-        <div className="flex flex-col items-center gap-1 md:flex-row md:gap-2">
+        <div className="flex flex-col flex-1 justify-end items-center gap-1 lg:flex-row lg:gap-2 pr-12">
           <Link
             href="https://x.com/veri_sense"
             target="_blank"

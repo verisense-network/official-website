@@ -3,15 +3,15 @@ import React from "react";
 const StepRestaking = () => {
   return (
     <>
-      <div className="flex flex-col md:hidden w-[370px] md:h-[380px] justify-center items-center mt-[60px] px-3 md:px-auto">
+      <div className="flex flex-col lg:hidden w-[370px] lg:h-[380px] justify-center items-center mt-[60px] px-3 lg:px-auto">
         <div className="flex items-center justify-center">
           <span className="inline-block w-[12px] h-[12px] bg-white rounded-full" />
-          <span className="inline-block w-[150px] md:w-[160px] h-[3px] bg-gradient-to-b from-white to-[#595959]" />
+          <span className="inline-block w-[150px] lg:w-[160px] h-[3px] bg-gradient-to-b from-white to-[#595959]" />
           <span className="inline-block w-[12px] h-[12px] bg-[#595959] rounded-full" />
-          <span className="inline-block w-[150px] md:w-[160px] h-[3px] bg-[#595959]" />
+          <span className="inline-block w-[150px] lg:w-[160px] h-[3px] bg-[#595959]" />
           <span className="inline-block w-[12px] h-[12px] bg-[#595959] rounded-full" />
         </div>
-        <div className="flex text-white/70 text-[12px] md:text-[16px] font-medium w-full items-center mt-1">
+        <div className="flex text-white/70 text-[12px] lg:text-[16px] font-medium w-full items-center mt-1">
           <span className="inline-block text-white">AVS Client</span>
           <div className="flex flex-col items-center justify-center flex-grow">
             <span className="inline-block">Validator</span>
@@ -19,8 +19,8 @@ const StepRestaking = () => {
           <span className="inline-block">Ecosystem</span>
         </div>
       </div>
-      <div className="hidden md:flex w-[370px] h-[380px] justify-center pl-[100px]">
-        <div className="flex flex-col items-center justify-center">
+      <div className="hidden lg:flex w-[150px] h-[380px] justify-center">
+        <div className="flex flex-col items-center">
           <span className="inline-block w-[12px] h-[12px] bg-white rounded-full" />
           <span className="inline-block w-[3px] h-[160px] bg-gradient-to-b from-white to-[#595959]" />
           <span className="inline-block w-[12px] h-[12px] bg-[#595959] rounded-full" />
