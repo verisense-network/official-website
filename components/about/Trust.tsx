@@ -19,7 +19,7 @@ const Trust = () => {
           Plug and play with any restaking layers to unlock the AVS demand
         </div>
       </div>
-      <div className='flex lg:justify-end justify-center'>
+      <div className="flex lg:justify-end justify-center">
         <Image
           src="/image-trust.png"
           alt=""

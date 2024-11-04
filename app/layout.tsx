@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Header />
-          <div className="w-full space-y-[100px] overflow-hidden flex justify-center">{children}</div>
+          <div className="w-full space-y-[100px] overflow-hidden flex justify-center">
+            {children}
+          </div>
         </Providers>
       </body>
     </html>
