@@ -23,28 +23,28 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Image boxSize={8} src="/icon-x.svg" alt="X" />
+            <Image boxSize={8} src="/icon-x.svg" alt="X" className="hover:opacity-70 transition-opacity duration-200"/>
           </Link>
           <Link
             href="https://discord.gg/cvQQe7ne"
             target="_blank"
             rel="noreferrer"
           >
-            <Image boxSize={8} src="/icon-t.svg" alt="T" />
+            <Image boxSize={8} src="/icon-t.svg" alt="T" className="hover:opacity-70 transition-opacity duration-200" />
           </Link>
           <Link
             href="https://t.me/verisense_official"
             target="_blank"
             rel="noreferrer"
           >
-            <Image boxSize={8} src="/icon-f.svg" alt="F" />
+            <Image boxSize={8} src="/icon-f.svg" alt="F" className="hover:opacity-70 transition-opacity duration-200" />
           </Link>
           <Link
             href="https://verisense.medium.com/"
             target="_blank"
             rel="noreferrer"
           >
-            <Image boxSize={8} src="/icon-e.svg" alt="E" />
+            <Image boxSize={8} src="/icon-e.svg" alt="E" className="hover:opacity-70 transition-opacity duration-200" />
           </Link>
         </div>
       </div>
