@@ -66,7 +66,7 @@ const HeaderMenus = () => {
             <div
               className={clsx(
                 "text-lg relative cursor-pointer",
-                isCurrentRoute ? "text-theme-color" : "!text-white/70",
+                isCurrentRoute ? "text-theme-color" : "!text-white/70 hover:underline",
               )}
               key={link.title}
               rel="noreferrer"
