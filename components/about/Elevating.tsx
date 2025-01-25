@@ -2,7 +2,7 @@ import React from "react";
 
 const Elevating = () => {
   return (
-    <div className="flex flex-col justify-center lg:items-start items-center pl-3">
+    <div className="flex flex-col justify-center lg:items-start items-center lg:pl-3">
       <div>
         <div className="text-[#ff847c] text-[15px] lg:text-[22px] font-medium">
           VERISENSE MAKES NEW SENSE!

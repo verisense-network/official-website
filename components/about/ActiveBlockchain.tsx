@@ -3,7 +3,7 @@ import { Image } from "@chakra-ui/react";
 
 const Item = () => {
   return (
-    <div className="text-white lg:w-[570px] mt-[60px] pl-3 lg:mt-0 lg:pl-[100px]">
+    <div className="text-white lg:w-[570px] mt-[60px] lg:mt-0 lg:pl-[100px]">
       <div className="text-[22px] lg:text-[22px] text-[#ff847c] font-medium">
         Active Blockchain
       </div>

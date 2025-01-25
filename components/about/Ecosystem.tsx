@@ -5,7 +5,7 @@ import EcosystemItem from "./EcosystemItem";
 
 const Ecosystem = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:h-[720px] mt-[60px] lg:mt-0">
+    <div className="flex flex-col lg:flex-row items-center mt-[60px] lg:h-[720px] lg:mt-0">
       <StepEcosystem />
       <EcosystemItem />
       <Image
