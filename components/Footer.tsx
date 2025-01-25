@@ -12,9 +12,8 @@ const Footer = () => {
             alt=""
           />
           <div>
-            Verisense elevates the blockchain security economics to new heights,
+            Verisense: Elevating Blockchain Applicability to New Heights!
           </div>
-          <div>powered by the interoperability and FHE technologies.</div>
         </div>
 
         <div className="flex flex-col flex-1 justify-end items-center gap-1 lg:flex-row lg:gap-2 pr-12">
