@@ -12,11 +12,11 @@ const StepRestaking = () => {
           <span className="inline-block w-[12px] h-[12px] bg-white rounded-full" />
         </div>
         <div className="flex text-white/70 text-[12px] lg:text-[16px] font-medium w-full items-center mt-1">
-          <span className="inline-block ">AVS Client</span>
+          <span className="inline-block ">Active Blockchain</span>
           <div className="flex flex-col items-center justify-center flex-grow ">
-            <span className="inline-block">Validator</span>
+            <span className="inline-block">Atomic Execution</span>
           </div>
-          <span className="inline-block text-white">Ecosystem</span>
+          <span className="inline-block text-white">Validation-as-a-Service</span>
         </div>
       </div>
       <div className="hidden lg:flex w-[150px] h-[380px] justify-center">
@@ -28,11 +28,11 @@ const StepRestaking = () => {
           <span className="inline-block w-[12px] h-[12px] bg-white  rounded-full" />
         </div>
         <div className="flex flex-col h-full text-white/70 text-[16px] font-medium ml-[30px]">
-          <span className="inline-block ">AVS Client</span>
+          <span className="inline-block ">Active Blockchain</span>
           <div className="flex flex-col justify-center flex-grow">
-            <span className="inline-block">Validator</span>
+            <span className="inline-block">Atomic Execution</span>
           </div>
-          <span className="inline-block text-white">Ecosystem</span>
+          <span className="inline-block text-white">Validation-as-a-Service</span>
         </div>
       </div>
     </>
