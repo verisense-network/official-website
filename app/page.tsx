@@ -4,6 +4,7 @@ import Elevating from "@/components/about/Elevating";
 import Restakers from "@/components/about/Restakers";
 import Trust from "@/components/about/Trust";
 import Validator from "@/components/about/Validator";
+import Partners from "@/components/partners";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Restakers />
       <Validator />
       <Ecosystem />
+      <Partners />
       <Footer />
     </div>
   );
