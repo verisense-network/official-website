@@ -7,27 +7,50 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  MenuGroup,
   // useToast,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
-const linksToProduction = [
-  { title: "Papers", href: "https://github.com/verisense-network/papers" },
-  { title: "Github", href: "https://github.com/verisense-network" },
-  { title: "Docs", href: "https://docs.verisense.network" },
-  { title: "About", href: "/" },
-];
-const linksToTest = [
-  { title: "Papers", href: "https://github.com/verisense-network/papers" },
-  { title: "Github", href: "https://github.com/verisense-network" },
-  { title: "Docs", href: "https://docs.verisense.network" },
-  { title: "About", href: "/" },
-];
-
 const HeaderMenus = () => {
   const pathname = usePathname();
-  const links =
-    process.env.NODE_ENV !== "production" ? linksToTest : linksToProduction;
+
+  const LINKS = [
+    {
+      title: "New Applicability",
+      children: [
+        { title: "AI  (Aitonomy.world)", href: "https://aitonomy.world" },
+        { title: "Rustcc.cn", href: "https://rustcc.cn" },
+        { title: "Bitcoin", href: "https://bitcoin.com" },
+        { title: "Solana (coming)", href: "" },
+        { title: "Ethereum (coming)", href: "" },
+      ],
+    },
+    {
+      title: "Learn",
+      children: [
+        { title: "Whitepaper", href: "https://github.com/verisense-network/papers/blob/main/whitepaper/verisense_whitepaper_20240818.pdf" },
+        { title: "Research paper", href: "https://arxiv.org/pdf/2408.16094" },
+        { title: "Blog", href: "https://verisense.medium.com/" },
+      ],
+    },
+    {
+      title: "Developer",
+      children: [
+        { title: "Docs", href: "https://docs.verisense.network" },
+        { title: "Github", href: "https://github.com/verisense-network" },
+      ],
+    },
+    {
+      title: "Network",
+      children: [
+        { title: "SDK", href: "https://crates.io/crates/vrs-core-sdk" },
+        { title: "Explorer", href: "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Falpha-devnet.verisense.network#/explorer" },
+        { title: "Faucet", href: "" },
+      ],
+    },
+    { title: "About", href: "/" },
+  ];
 
   const handleClick = (link: string) => {
     window.open(link);
@@ -40,42 +63,71 @@ const HeaderMenus = () => {
           <MenuButton className="text-theme-color text-[14px] lg:text-[20px]">
             {pathname === "/"
               ? "About"
-              : links.find((item) => item.href === pathname)?.title}
+              : LINKS.find((item) => item.href === pathname)?.title}
             <ChevronDownIcon />
           </MenuButton>
           <MenuList>
-            {links.map((link) => (
-              <MenuItem
-                className={clsx({ "text-theme-color": link.href === pathname })}
-                key={link.href}
-                onClick={() => {
-                  return link.href === "/" ? undefined : handleClick(link.href);
-                }}
-              >
-                {link.title}
-              </MenuItem>
+            {LINKS.map((link) => (
+              link.children?.length ? (
+                <MenuGroup key={link.title} title={link.title} color={"#999"}>
+                  {link.children.map((child) => (
+                    <MenuItem
+                      key={child.title}
+                      {...(child.href ? { as: "a", target: "_blank", href: child.href } : {})}
+                      textColor={!child.href ? "#666" : "#ddd"}
+                      onClick={() => {
+                        return child.href === "/" ? undefined : (child.href && handleClick(child.href));
+                      }}
+                    >
+                      {child.title}
+                    </MenuItem>
+                  ))}
+                </MenuGroup>
+              ) : (
+                <MenuItem
+                  className={clsx({ "text-theme-color": link.href === pathname })}
+                  key={link.href}
+                  onClick={() => {
+                    return link.href === "/" ? undefined : (link.href && handleClick(link.href));
+                  }}
+                >
+                  {link.title}
+                </MenuItem>
+              )
             ))}
           </MenuList>
         </Menu>
       </div>
       <div className="items-center justify-center hidden gap-6 lg:flex lg:gap-12 min-w-20">
-        {links.map((link) => {
+        {LINKS.map((link) => {
           const isCurrentRoute = link.href === pathname;
-
           return (
             <div
-              className={clsx(
-                "text-lg relative cursor-pointer",
-                isCurrentRoute ? "text-theme-color" : "!text-white/70",
-              )}
+              className="text-lg relative cursor-pointer"
               key={link.title}
               rel="noreferrer"
-              // onClick={link.href === "/" ? undefined : addToast}
               onClick={() => {
-                return link.href === "/" ? undefined : handleClick(link.href);
+                return link.href === "/" ? undefined : link.href && handleClick(link.href);
               }}
             >
-              <span>{link.title}</span>
+              <Menu>
+                <MenuButton className={isCurrentRoute ? "text-theme-color" : "!text-white/70"}>
+                  {link.title}
+                </MenuButton>
+                {link.children?.length && (
+                  <MenuList>
+                    {link.children?.map((child) => (
+                      <MenuItem
+                        key={child.title}
+                        {...(child.href ? { as: "a", target: "_blank", href: child.href } : {})}
+                        textColor={!child.href ? "#666" : "#ddd"}
+                      >
+                        {child.title}
+                      </MenuItem>
+                  ))}
+                </MenuList>
+                )}
+              </Menu>
             </div>
           );
         })}
