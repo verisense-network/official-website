@@ -21,7 +21,7 @@ const HeaderMenus = () => {
       children: [
         { title: "AI  (Aitonomy.world)", href: "https://aitonomy.world" },
         { title: "Rustcc.cn", href: "https://rustcc.cn" },
-        { title: "Bitcoin", href: "https://bitcoin.com" },
+        { title: "Bitcoin (coming)", href: "" },
         { title: "Solana (coming)", href: "" },
         { title: "Ethereum (coming)", href: "" },
       ],

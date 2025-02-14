@@ -46,9 +46,9 @@ export default function Partners() {
         },
     ]
     return <>
-        <Heading size="lg" className="text-theme-color">Building Together with the Best</Heading>
-        <Container maxW={"90%"} paddingTop={30} paddingBottom={50}>
-            <Box display={"grid"} gridTemplateColumns={{ base: "repeat(3, 1fr)", md: "repeat(5, 1fr)" }} gap={5} justifyContent={"center"} alignItems="center">
+        <Heading size="lg" className="text-theme-color" paddingTop={{ base: 100, lg: 150 }}>Building Together with the Best</Heading>
+        <Container maxW={"90%"} paddingTop={70} paddingBottom={{ base: 10, md: 120}}>
+            <Box display={"grid"} gridTemplateColumns={{ base: "repeat(3, 1fr)", xl: "repeat(5, 1fr)" }} gap={12} justifyContent={"center"} alignItems="center">
                 {data.map((item) => (
                     <Card
                         key={item.name}
@@ -57,11 +57,11 @@ export default function Partners() {
                         backgroundColor={"transparent"}
                         borderRadius={10}
                         boxShadow="md"
-                        width={100}
+                        width="auto"
                         className="grayscale hover:grayscale-0 transition-all duration-300"
                     >
-                        <Image style={{ height: 140, objectFit: "contain" }} src={item.image.default} alt={item.name} />
-                        <Text fontSize="14" className="text-nowrap" color={"#ccc"}>{item.name}</Text>
+                        <Image className="w-[70px] h-[70px] lg:w-[100px] lg:h-[100px] rounded overflow-hidden" style={{ objectFit: "contain" }} src={item.image.default} alt={item.name} />
+                        <Text mt={4} fontSize={{ base: "14px", lg: "16px" }} className="text-nowrap" color={"#ccc"}>{item.name}</Text>
                     </Card>
                 ))}
             </Box>
