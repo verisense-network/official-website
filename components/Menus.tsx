@@ -89,15 +89,12 @@ const HeaderMenus = () => {
                       {link.children?.map((child) => (
                         <Link
                           key={child.title}
-                          {...(child.href ? { as: "a", target: "_blank", href: child.href } : { href: ""})}
+                          {...(child.href ? { target: "_blank", href: child.href } : { href: ""})}
                           style={{
                             display: "inline-block",
                             fontSize: 16,
                             color: !child.href ? "#666" : "#bbb",
                             whiteSpace: "nowrap",
-                          }}
-                          onClick={() => {
-                            return child.href === "/" ? undefined : (child.href && handleClick(child.href));
                           }}
                         >
                           {child.title}
