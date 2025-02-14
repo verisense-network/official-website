@@ -1,25 +1,30 @@
 import React from "react";
-import { Image } from "@chakra-ui/react";
+import { Feature } from "../types";
+import Image from "next/image";
 
-const Item = () => {
+interface ContentProps {
+  feature: Feature;
+}
+
+const Content = ({ feature }: ContentProps) => {
   return (
     <div className="text-white lg:w-[570px] mt-[60px] lg:mt-0 lg:pl-[100px]">
       <div className="text-[22px] lg:text-[22px] text-[#ff847c] font-medium">
-        Active Blockchain
+        {feature.title}
       </div>
       <div className=" clear-both mt-[30px] text-[26px] lg:text-[48px] leading-[40px] lg:leading-[64px]">
-        <span>Shatter the Boundary of Blockchain.</span>
+        <span>{feature.heading}</span>
         <Image
           className="inline-block w-[44px] h-[32px] ml-1 lg:ml-2"
-          src="/icon-restakers.svg"
+          src={feature.headingIcon}
           alt=""
         />
       </div>
       <div className="text-[13px] lg:text-[18px] font-light mt-[30px]">
-        Break the limitation of smart contract. Break the passiveness of blockchain.
+        {feature.description}
       </div>
     </div>
   );
 };
 
-export default React.memo(Item);
+export default React.memo(Content);
