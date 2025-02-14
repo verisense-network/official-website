@@ -37,14 +37,20 @@ const Steps = ({ steps, feature, features, setCurrentFeatureByStepTitle }: StepP
           {steps.map((step, index) => (
             index !== steps.length - 1 && index !== 0 ? (
               <div
-                className="flex flex-col items-center justify-center flex-grow cursor-pointer"
+                className={clsx("flex flex-col items-center justify-center flex-grow cursor-pointer", step === feature.title && "text-white")}
                 onClick={() => setCurrentFeatureByStepTitle(step)}
                 key={step}
               >
                 <span className="inline-block">{step}</span>
               </div>
             ) : (
-              <span key={step} className="inline-block text-white cursor-pointer" onClick={() => setCurrentFeatureByStepTitle(step)}>{step}</span>
+              <span 
+                key={step}
+                className={clsx("inline-block cursor-pointer", step === feature.title && "text-white")}
+                onClick={() => setCurrentFeatureByStepTitle(step)}
+              >
+                {step}
+              </span>
             )
           ))}
         </div>

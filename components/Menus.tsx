@@ -79,7 +79,7 @@ const HeaderMenus = () => {
         <Box position="fixed" display={menuOpen ? "block" : "none"} top={0} left={0} right={0} bottom={0} zIndex={1000} bgColor="#191919" mt="75px" w="100vw" h="100vh">
           <Accordion defaultIndex={[0]}>
             {LINKS.map((link) => (
-                <AccordionItem key={link.title} title={link.title} p={8}>
+                <AccordionItem key={link.title} title={link.title} p={6}>
                   <AccordionButton color="white" fontSize={20} textColor={link.href === pathname ? "brand" : "#ddd"}>
                     {link.title}
                   </AccordionButton>
@@ -94,6 +94,7 @@ const HeaderMenus = () => {
                             display: "inline-block",
                             fontSize: 16,
                             color: !child.href ? "#666" : "#bbb",
+                            whiteSpace: "nowrap",
                           }}
                           onClick={() => {
                             return child.href === "/" ? undefined : (child.href && handleClick(child.href));
