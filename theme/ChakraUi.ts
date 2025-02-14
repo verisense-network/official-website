@@ -3,19 +3,18 @@ import { extendTheme } from "@chakra-ui/react";
 import Menu from "./Menu"; 
 import Modal from "./Modal"; 
 import Progress from "./Progress";
+import Accordion from "./Accordion";
  
 const Theme = extendTheme({
   components: {
     Modal,
     Menu,
-    Progress
+    Progress,
+    Accordion,
   }, 
   colors:{
     // green: "#ABF51D",
-    brand: {
-      100: "#f7fafc", 
-      900: "#1a202c",
-    },
+    brand: "#ff847c",
   },
   initialColorMode: "dark", // 'dark' | 'light'
   useSystemColorMode: false,

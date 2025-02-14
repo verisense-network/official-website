@@ -1,16 +1,21 @@
 "use client";
-import React from "react";
+
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
 import {
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuGroup,
-  // useToast,
+  Button,
+  Box,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import Link from "next/link";
 
 const HeaderMenus = () => {
   const pathname = usePathname();
@@ -52,51 +57,58 @@ const HeaderMenus = () => {
     { title: "About", href: "/" },
   ];
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleClick = (link: string) => {
     window.open(link);
   };
+  
+  const toggleMenus = () => {
+    setMenuOpen(!menuOpen);
+  }
 
   return (
     <>
       <div className="flex items-center justify-center lg:hidden min-w-20">
-        <Menu>
-          <MenuButton className="text-theme-color text-[14px] lg:text-[20px]">
-            {pathname === "/"
+        <Button onClick={toggleMenus} variant="ghost" color="brand" bgColor={menuOpen ? "#111" : ""} _hover={{ bgColor: "#111" }}>
+          {pathname === "/"
               ? "About"
               : LINKS.find((item) => item.href === pathname)?.title}
             <ChevronDownIcon />
-          </MenuButton>
-          <MenuList>
+        </Button>
+        <Box position="fixed" display={menuOpen ? "block" : "none"} top={0} left={0} right={0} bottom={0} zIndex={1000} bgColor="#191919" mt="75px" w="100vw" h="100vh">
+          <Accordion defaultIndex={[0]}>
             {LINKS.map((link) => (
-              link.children?.length ? (
-                <MenuGroup key={link.title} title={link.title} color={"#999"}>
-                  {link.children.map((child) => (
-                    <MenuItem
-                      key={child.title}
-                      {...(child.href ? { as: "a", target: "_blank", href: child.href } : {})}
-                      textColor={!child.href ? "#666" : "#ddd"}
-                      onClick={() => {
-                        return child.href === "/" ? undefined : (child.href && handleClick(child.href));
-                      }}
-                    >
-                      {child.title}
-                    </MenuItem>
-                  ))}
-                </MenuGroup>
-              ) : (
-                <MenuItem
-                  className={clsx({ "text-theme-color": link.href === pathname })}
-                  key={link.href}
-                  onClick={() => {
-                    return link.href === "/" ? undefined : (link.href && handleClick(link.href));
-                  }}
-                >
-                  {link.title}
-                </MenuItem>
-              )
+                <AccordionItem key={link.title} title={link.title} p={8}>
+                  <AccordionButton color="white" fontSize={20} textColor={link.href === pathname ? "brand" : "#ddd"}>
+                    {link.title}
+                  </AccordionButton>
+                  {link.children?.length && (
+                    <AccordionPanel>
+                      <Box mt={4} display="grid" gridTemplateColumns="repeat(2, 1fr)" gap={4}>
+                      {link.children?.map((child) => (
+                        <Link
+                          key={child.title}
+                          {...(child.href ? { as: "a", target: "_blank", href: child.href } : { href: ""})}
+                          style={{
+                            display: "inline-block",
+                            fontSize: 16,
+                            color: !child.href ? "#666" : "#bbb",
+                          }}
+                          onClick={() => {
+                            return child.href === "/" ? undefined : (child.href && handleClick(child.href));
+                          }}
+                        >
+                          {child.title}
+                        </Link>
+                      ))}
+                      </Box>
+                  </AccordionPanel>
+                  )}
+                </AccordionItem>
             ))}
-          </MenuList>
-        </Menu>
+            </Accordion>
+          </Box>
       </div>
       <div className="items-center justify-center hidden gap-6 lg:flex lg:gap-12 min-w-20">
         {LINKS.map((link) => {

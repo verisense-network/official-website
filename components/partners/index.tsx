@@ -6,7 +6,7 @@ export default function Partners() {
     const data = [
         {
             name: "ElizaOS",
-            image: require("./assets/elizaos.jpg"),
+            image: require("./assets/elizaos.svg"),
         },
         {
             name: "ai16z",
