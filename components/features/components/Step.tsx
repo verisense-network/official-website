@@ -39,11 +39,12 @@ const Steps = ({ steps, feature, features, setCurrentFeatureByStepTitle }: StepP
               <div
                 className="flex flex-col items-center justify-center flex-grow cursor-pointer"
                 onClick={() => setCurrentFeatureByStepTitle(step)}
+                key={step}
               >
                 <span className="inline-block">{step}</span>
               </div>
             ) : (
-              <span className="inline-block text-white cursor-pointer" onClick={() => setCurrentFeatureByStepTitle(step)}>{step}</span>
+              <span key={step} className="inline-block text-white cursor-pointer" onClick={() => setCurrentFeatureByStepTitle(step)}>{step}</span>
             )
           ))}
         </div>
@@ -73,6 +74,7 @@ const Steps = ({ steps, feature, features, setCurrentFeatureByStepTitle }: StepP
               <div
                 className={clsx("flex flex-col justify-center flex-grow cursor-pointer", step === feature.title && "text-white")}
                 onClick={() => setCurrentFeatureByStepTitle(step)}
+                key={step}
               >
                 <span className="inline-block">{step}</span>
               </div>
@@ -80,6 +82,7 @@ const Steps = ({ steps, feature, features, setCurrentFeatureByStepTitle }: StepP
               <span
                 className={clsx("inline-block cursor-pointer", step === feature.title && "text-white")}
                 onClick={() => setCurrentFeatureByStepTitle(step)}
+                key={step}
               >
                 {step}
               </span>
