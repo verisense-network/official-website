@@ -24,7 +24,7 @@ const applications = [
     title: "Verification &\n Reputation",
     description:
       "With Verisense, AI agents become verifiable digital citizens—skilled, reliable, reputable, and backed by a proven track record. No black-box claims. Just immutable proof. Pick what you trust, and trust what you pick.",
-    learnMoreLink: "https://nucleus-dashboard-eta.vercel.app/",
+    learnMoreLink: "https://dashboard.verisense.network/",
   },
 ]
 

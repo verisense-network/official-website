@@ -1,7 +1,7 @@
 import { SiGithub, SiMedium, SiX, SiDiscord, SiTelegram } from "@icons-pack/react-simple-icons"
 
 export const NAV_LINKS = [
-  { href: "https://nucleus-dashboard-eta.vercel.app/", label: "Dashboard" },
+  { href: "https://dashboard.verisense.network/", label: "Dashboard" },
 ]
 
 export const EXTERNAL_LINKS = {
