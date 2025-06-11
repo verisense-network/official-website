@@ -1,17 +1,19 @@
-import Footer from "@/components/Footer";
-import Elevating from "@/components/about/Elevating";
-import Features from "@/components/features";
-import Trust from "@/components/about/Trust";
-import Partners from "@/components/partners";
+import HeroSection from "@/components/home/hero-section"
+import WhyVerisenseSection from "@/components/home/why-verisense-section"
+import KeyTechnologySection from "@/components/home/key-technology-section"
+import KeyApplicationsSection from "@/components/home/key-applications-section"
+import BackedBySection from "@/components/home/backed-by-section"
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="lg:w-[1400px] px-6 w-full flex flex-col w-screen min-h-screen space-y-12">
-      <Trust />
-      <Elevating />
-      <Features />
-      <Partners />
-      <Footer />
-    </div>
-  );
+    <>
+      <HeroSection />
+      <div className="relative bg-[url('/bg-lines.svg')] bg-no-repeat bg-position-[center_240px] md:bg-position-[60%_240px] z-10">
+        <WhyVerisenseSection />
+        <KeyTechnologySection />
+        <KeyApplicationsSection />
+      </div>
+      <BackedBySection />
+    </>
+  )
 }
