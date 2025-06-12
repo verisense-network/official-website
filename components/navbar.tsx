@@ -41,7 +41,7 @@ export default function Navbar() {
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           {EXTERNAL_LINKS.developer.links.map((link) => (
-            <DropdownMenuItem key={link.label} asChild disabled={link.disabled}>
+            <DropdownMenuItem key={link.label} asChild>
               <a href={link.href} target="_blank" rel="noopener noreferrer">
                 {link.label}
               </a>
@@ -66,8 +66,8 @@ export default function Navbar() {
         </DropdownMenuContent>
       </DropdownMenu>
       <Button variant="ghost" asChild>
-        <a href={EXTERNAL_LINKS.testnet.href} target="_blank" rel="noopener noreferrer">
-          {EXTERNAL_LINKS.testnet.label}
+        <a href={EXTERNAL_LINKS.betanet.href} target="_blank" rel="noopener noreferrer">
+          {EXTERNAL_LINKS.betanet.label}
         </a>
       </Button>
     </>
