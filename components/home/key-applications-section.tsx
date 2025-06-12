@@ -44,7 +44,7 @@ export default function KeyApplicationsSection() {
                 <div className="p-3 bg-muted rounded-full mb-4 mx-auto">{app.icon}</div>
                 <CardTitle className="text-3xl whitespace-break-spaces">{app.title}</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow">
+              <CardContent className="flex-grow text-left">
                 <CardDescription className="text-base whitespace-break-spaces">{app.description}</CardDescription>
               </CardContent>
               <div className="p-6 pt-0">
