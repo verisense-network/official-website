@@ -18,8 +18,7 @@ export const EXTERNAL_LINKS = {
       { href: "https://docs.verisense.network", label: "Docs" },
       { href: "https://github.com/verisense-network", label: "GitHub" },
       { href: "https://crates.io/crates/vrs-core-sdk", label: "SDK" },
-      { href: "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Falpha-devnet.verisense.network#/explorer", label: "Explorer" },
-      { href: "#Faucet", label: "Faucet", disabled: true },
+      { href: "https://t.me/verisense_faucet_bot", label: "Faucet" },
     ],
   },
   community: {
@@ -37,7 +36,7 @@ export const EXTERNAL_LINKS = {
       { href: "https://verisense.medium.com/", label: "Blog" },
     ],
   },
-  testnet: { href: "#testnet", label: "Testnet" },
+  betanet: { href: "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.beta.verisense.network#/explorer", label: "Beta Network Explorer" },
 }
 
 export const BACKED_BY_LOGOS = [
