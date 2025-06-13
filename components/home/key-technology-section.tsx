@@ -36,7 +36,7 @@ export default function KeyTechnologySection() {
             <Card key={tech.title} className="flex relative flex-col shadow-lg">
               <div className="absolute top-8 left-5">{tech.icon}</div>
               <CardHeader className="items-center text-center">
-                <CardTitle className="text-2xl max-w-2/3 mx-auto min-h-12 md:text-3xl">{tech.title}</CardTitle>
+                <CardTitle className="flex items-center text-2xl max-w-2/3 md:max-w-full mx-auto min-h-18 md:text-3xl">{tech.title}</CardTitle>
                 <p className="text-muted-foreground mt-1 font-light">{tech.subtitle}</p>
               </CardHeader>
               <CardContent className="flex-grow">
