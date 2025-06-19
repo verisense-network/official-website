@@ -17,7 +17,7 @@ const list = [
         icon: <Award className="h-6 w-6 text-primary" />,
         title: "Reputation & Credibility",
         description:
-          "Onchain agents tap into tokenization natively. Incentive-ready.\nMonetize earlier, deeper, and beyond subscriptions or pay-per-usage.",
+          "Public, immutable logs build a track record of performance and experience\nPick the best, skip the rest - no more guessing in the dark",
       },
     ]
   },
@@ -29,7 +29,7 @@ const list = [
         icon: <DollarSign className="h-6 w-6 text-primary" />,
         title: "Built-in Monetization",
         description:
-          "Public, immutable logs build a track record of performance and experience\nPick the best, skip the rest - no more guessing in the dark",
+          "Onchain agents tap into tokenization natively. Incentive-ready.\nMonetize earlier, deeper, and beyond subscriptions or pay-per-usage.",
       },
       {
         icon: <Puzzle className="h-6 w-6 text-primary" />,
@@ -48,7 +48,7 @@ export default function WhyVerisenseSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-normal leading-tight">Cybernetic Contracts:<br />Where AI Agents Meet Onchain Execution</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mt-4 mx-auto">
-            Probabilistic AI Joins Forces with Blockchain&apos;s Determinism<br/>Giving Rise to Cybernetic Society with Accountability and Regulation
+            Probabilistic AI Joins Forces with Blockchain&apos;s Determinism<br />Giving Rise to Cybernetic Society with Accountability and Regulation
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
