@@ -15,7 +15,7 @@ export default function HeroSection() {
         </p>
         <div className="space-x-4 mt-12">
           <Button size="lg">
-            <Link href="/coming-soon"> Enter Cybernetic Society</Link>
+            <Link href="https://space.verisense.network" target="_blank"> Enter Cybernetic Society</Link>
           </Button>
         </div>
       </div>
