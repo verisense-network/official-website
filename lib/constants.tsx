@@ -44,7 +44,7 @@ export const BACKED_BY_LOGOS = [
   { name: "Google", src: "/brand/google.svg", alt: "Google Logo" },
   { name: "Taisu Venture", src: "/brand/taisu-venture.png", alt: "Taisu Venture Logo" },
   { name: "Web3 Foundation", src: "/brand/w3f.png", alt: "Web3 Foundation Logo" },
-  { name: "ElizaOS", src: "/brand/eliza-os.svg", alt: "ElizaOS Logo" },
+  // { name: "ElizaOS", src: "/brand/eliza-os.svg", alt: "ElizaOS Logo" },
   { name: "Wintermute Angels", src: "/brand/wintermute.svg", alt: "Angels from Wintermute Logo" },
   { name: "Polkadot Angels", src: "/brand/polkadot.svg", alt: "Angels from Polkadot Logo" },
   { name: "P2P.org Angels", src: "/brand/p2p.svg", alt: "Angels from P2P.org Logo" },
