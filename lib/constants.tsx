@@ -1,7 +1,7 @@
 import { SiGithub, SiMedium, SiX, SiDiscord, SiTelegram } from "@icons-pack/react-simple-icons"
 
 export const NAV_LINKS = [
-  { href: "https://dashboard.verisense.network/", label: "Dashboard" },
+  { href: "https://dashboard.verisense.network", label: "Dashboard" },
 ]
 
 export const EXTERNAL_LINKS = {
@@ -9,7 +9,7 @@ export const EXTERNAL_LINKS = {
     label: "Product",
     links: [
       { href: "/coming-soon", label: "Sense Home" },
-      { href: "/coming-soon", label: "Sense Space" },
+      { href: "https://space.verisense.network", label: "Sense Space" },
     ],
   },
   developer: {

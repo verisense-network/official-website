@@ -28,7 +28,7 @@ export default function Navbar() {
         <DropdownMenuContent>
           {EXTERNAL_LINKS.product.links.map((link) => (
             <DropdownMenuItem key={link.label} asChild>
-              <Link href={link.href}>{link.label}</Link>
+              <Link href={link.href} target="_blank">{link.label}</Link>
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
@@ -42,9 +42,9 @@ export default function Navbar() {
         <DropdownMenuContent>
           {EXTERNAL_LINKS.developer.links.map((link) => (
             <DropdownMenuItem key={link.label} asChild>
-              <a href={link.href} target="_blank" rel="noopener noreferrer">
+              <Link href={link.href} target="_blank">
                 {link.label}
-              </a>
+              </Link>
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
@@ -58,17 +58,17 @@ export default function Navbar() {
         <DropdownMenuContent>
           {EXTERNAL_LINKS.community.links.map((link) => (
             <DropdownMenuItem key={link.label} asChild>
-              <a href={link.href} target="_blank" rel="noopener noreferrer">
+              <Link href={link.href} target="_blank">
                 {link.label}
-              </a>
+              </Link>
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
       </DropdownMenu>
       <Button variant="ghost" asChild>
-        <a href={EXTERNAL_LINKS.betanet.href} target="_blank" rel="noopener noreferrer">
+        <Link href={EXTERNAL_LINKS.betanet.href} target="_blank">
           {EXTERNAL_LINKS.betanet.label}
-        </a>
+        </Link>
       </Button>
     </>
   )

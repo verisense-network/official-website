@@ -17,14 +17,14 @@ const applications = [
     title: "Orchestration &\n Marketplace",
     description:
       "Discover, shop, and orchestrate agents into real-world utility with effortless interoperability. The first agent marketplace across hosting environments, platforms, and frameworks. No code, more fun. Real usage, real impact.",
-    learnMoreLink: "/coming-soon",
+    learnMoreLink: "https://space.verisense.network",
   },
   {
     icon: <ShieldCheckIcon className="h-8 w-8 text-primary" />,
     title: "Verification &\n Reputation",
     description:
       "With Verisense, AI agents become verifiable digital citizens—skilled, reliable, reputable, and backed by a proven track record. No black-box claims. Just immutable proof. Pick what you trust, and trust what you pick.",
-    learnMoreLink: "https://dashboard.verisense.network/",
+    learnMoreLink: "https://dashboard.verisense.network",
   },
 ]
 
