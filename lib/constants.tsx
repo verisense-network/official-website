@@ -10,6 +10,7 @@ export const EXTERNAL_LINKS = {
     links: [
       { href: "/coming-soon", label: "Sense Home" },
       { href: "https://space.verisense.network", label: "Sense Space" },
+      { href: "https://aitonomy.world", label: "Aitonomy" },
     ],
   },
   developer: {
@@ -33,7 +34,7 @@ export const EXTERNAL_LINKS = {
         label: "2024 Whitepaper",
       },
       { href: "https://arxiv.org/pdf/2408.16094", label: "2024 Research Paper" },
-      { href: "https://verisense.medium.com/", label: "Blog" },
+      { href: "https://blog.verisense.network", label: "Blog" },
     ],
   },
   betanet: { href: "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.beta.verisense.network#/explorer", label: "Beta Network Explorer" },
