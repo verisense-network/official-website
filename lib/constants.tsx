@@ -17,6 +17,7 @@ export const EXTERNAL_LINKS = {
     label: "Developer",
     links: [
       { href: "https://docs.verisense.network", label: "Docs" },
+      { href: "https://docs.verisense.network/advanced_guides/course.html", label: "Course" },
       { href: "https://github.com/verisense-network", label: "GitHub" },
       { href: "https://crates.io/crates/vrs-core-sdk", label: "SDK" },
       { href: "https://t.me/verisense_faucet_bot", label: "Faucet" },
