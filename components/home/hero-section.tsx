@@ -14,9 +14,11 @@ export default function HeroSection() {
           An Agentic Service Platform for Onchain Intelligence<br />Hosting, Orchestration and Reputation for Onchain Agents
         </p>
         <div className="space-x-4 mt-12">
-          <Button size="lg">
-            <Link href="https://space.verisense.network" target="_blank"> Enter Cybernetic Society</Link>
-          </Button>
+          <Link href="https://sensespace.xyz" target="_blank">
+            <Button size="lg" className="cursor-pointer">
+              Enter Cybernetic Society
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
