@@ -12,6 +12,20 @@ import Link from "next/link"
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const renderItems = (links: Array<{ href: string; label: string }>, isMobile: boolean) => {
+    return links.map((link) => (
+      <DropdownMenuItem key={link.label} asChild>
+        <Link
+          href={link.href}
+          target={link.href.startsWith('/') ? '_self' : '_blank'}
+          className="cursor-pointer"
+        >
+          {link.label}
+        </Link>
+      </DropdownMenuItem>
+    ))
+  }
+
   const renderNavLinks = (isMobile: boolean) => (
     <>
       {NAV_LINKS.map((link) => (
@@ -26,11 +40,7 @@ export default function Navbar() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          {EXTERNAL_LINKS.product.links.map((link) => (
-            <DropdownMenuItem key={link.label} asChild>
-              <Link href={link.href} target="_blank">{link.label}</Link>
-            </DropdownMenuItem>
-          ))}
+          {renderItems(EXTERNAL_LINKS.product.links, isMobile)}
         </DropdownMenuContent>
       </DropdownMenu>
       <DropdownMenu>
@@ -40,13 +50,7 @@ export default function Navbar() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          {EXTERNAL_LINKS.developer.links.map((link) => (
-            <DropdownMenuItem key={link.label} asChild>
-              <Link href={link.href} target="_blank">
-                {link.label}
-              </Link>
-            </DropdownMenuItem>
-          ))}
+          {renderItems(EXTERNAL_LINKS.developer.links, isMobile)}
         </DropdownMenuContent>
       </DropdownMenu>
       <DropdownMenu>
@@ -56,13 +60,7 @@ export default function Navbar() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          {EXTERNAL_LINKS.community.links.map((link) => (
-            <DropdownMenuItem key={link.label} asChild>
-              <Link href={link.href} target="_blank">
-                {link.label}
-              </Link>
-            </DropdownMenuItem>
-          ))}
+          {renderItems(EXTERNAL_LINKS.community.links, isMobile)}
         </DropdownMenuContent>
       </DropdownMenu>
       <Button variant="ghost" asChild>
