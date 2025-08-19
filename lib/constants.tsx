@@ -8,7 +8,7 @@ export const EXTERNAL_LINKS = {
   product: {
     label: "Product",
     links: [
-      { href: "/coming-soon", label: "Sense Home" },
+      { href: "https://sensespace.xyz/studio", label: "Sense Studio" },
       { href: "https://sensespace.xyz", label: "Sense Space" },
       { href: "https://aitonomy.world", label: "Aitonomy" },
     ],
