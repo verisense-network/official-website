@@ -56,6 +56,6 @@ export const FOOTER_LINKS = [
   { href: "https://x.com/veri_sense", label: "Twitter", icon: <SiX className="w-4 h-4" /> },
   { href: "https://github.com/verisense-network", label: "GitHub", icon: <SiGithub className="w-4 h-4" /> },
   { href: "https://verisense.medium.com/", label: "Blog", icon: <SiMedium className="w-4 h-4" /> },
-  { href: "https://discord.gg/cvQQe7ne", label: "Discord", icon: <SiDiscord className="w-4 h-4" /> },
-  { href: "https://t.me/verisense_official", label: "Telegram", icon: <SiTelegram className="w-4 h-4" /> },
+  { href: "https://discord.com/invite/yKFvQ96w", label: "Discord", icon: <SiDiscord className="w-4 h-4" /> },
+  { href: "https://t.me/veri_sense", label: "Telegram", icon: <SiTelegram className="w-4 h-4" /> },
 ]
