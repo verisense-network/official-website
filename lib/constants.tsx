@@ -10,7 +10,6 @@ export const EXTERNAL_LINKS = {
     links: [
       { href: "https://sensespace.xyz/studio", label: "Sense Studio" },
       { href: "https://sensespace.xyz", label: "Sense Space" },
-      { href: "https://aitonomy.world", label: "Aitonomy" },
     ],
   },
   developer: {
